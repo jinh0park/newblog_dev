@@ -2,11 +2,11 @@
 layout: page
 title: About jinh0park
 tags: [about]
-date: 2024-02-16
+date: 2024-06-26
 comments: false
 ---
 
-<center><a href="/"><b>JINH-ZERO-PARK</b></a> = jinh-0-park</center>
+<center><a href="/"><b>JINH-ZERO-PARK</b></a> = jinh-0-park = jinh0 - park = 박진호</center>
 
 ## EXPERIENCES
 
