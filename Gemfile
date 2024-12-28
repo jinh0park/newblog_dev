@@ -7,4 +7,4 @@ gem 'jekyll-mentions'
 gem 'jekyll-feed'
 
 gem "webrick", "~> 1.7"
-gem 'bigdecimal', '1.4.2'
+gem 'bigdecimal', '~> 1.4.2'
