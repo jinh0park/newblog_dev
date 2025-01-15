@@ -1,0 +1,1 @@
+bundle exec jekyll build --destination ./docs/ 2>/dev/null

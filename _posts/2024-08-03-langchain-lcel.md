@@ -132,7 +132,7 @@ question = "대한민국의 수도는 어디인가요?"
 print(f"[답변]: {llm.invoke(question)}")
 ```
 
-```
+```output
 [답변]: content='대한민국의 수도는 서울입니다.' response_metadata={'token_usage': {'completion_tokens': 8, 'prompt_tokens': 16, 'total_tokens': 24}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_0f03d4f0ee', 'finish_reason': 'stop', 'logprobs': None} id='run-4202b29e-4843-4a65-9de9-4591dc0852d3-0' usage_metadata={'input_tokens': 16, 'output_tokens': 8, 'total_tokens': 24}
 ```
 
@@ -167,7 +167,7 @@ print(chain)
 print(type(chain))
 ```
 
-```
+```output
 first=PromptTemplate(input_variables=['country'], template='{country}의 수도는 어디입니까?') middle=[ChatOpenAI(client=<openai.resources.chat.completions.Completions object at 0x10e60bc50>, async_client=<openai.resources.chat.completions.AsyncCompletions object at 0x10e617590>, model_name='gpt-4o-mini', temperature=0.1, openai_api_key=SecretStr('**********'), openai_proxy='')] last=StrOutputParser()
 <class 'langchain_core.runnables.base.RunnableSequence'>
 ```
@@ -176,7 +176,7 @@ first=PromptTemplate(input_variables=['country'], template='{country}의 수도�
 type(chain)
 ```
 
-```
+```output
 langchain_core.runnables.base.RunnableSequence
 ```
 
@@ -184,7 +184,7 @@ langchain_core.runnables.base.RunnableSequence
 chain.invoke({"country": "대한민국"})
 ```
 
-```
+```output
 '대한민국의 수도는 서울입니다.'
 ```
 
@@ -197,7 +197,7 @@ print(output)
 print(output_parser.invoke(output))
 ```
 
-```
+```output
 text='대한민국의 수도는 어디입니까?'
 content='대한민국의 수도는 서울입니다.' response_metadata={'token_usage': {'completion_tokens': 8, 'prompt_tokens': 13, 'total_tokens': 21}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_0f03d4f0ee', 'finish_reason': 'stop', 'logprobs': None} id='run-9c6f9ff5-699c-40ef-ac25-28cc70f33f5a-0' usage_metadata={'input_tokens': 13, 'output_tokens': 8, 'total_tokens': 21}
 대한민국의 수도는 서울입니다.
@@ -228,11 +228,11 @@ print(
 prompt.invoke({"country":"대한민국"})
 ```
 
-```
+```output
 True
 ```
 
-```
+```output
 StringPromptValue(text='대한민국의 수도는?')
 ```
 
@@ -243,7 +243,7 @@ StringPromptValue(text='대한민국의 수도는?')
 (RunnablePassthrough.assign(address=lambda x: x["country"] + " " +  x["city"])).invoke({"country": "대한민국", "city": "서울"})
 ```
 
-```
+```output
 {'country': '대한민국', 'city': '서울', 'address': '대한민국 서울'}
 ```
 
@@ -257,7 +257,7 @@ from langchain_core.runnables import RunnableParallel
 RunnableParallel(out1=lambda x: x, out2=lambda x:x+1, out3=lambda x:x+2).invoke(1)
 ```
 
-```
+```output
 {'out1': 1, 'out2': 2, 'out3': 3}
 ```
 
@@ -283,7 +283,7 @@ combined_chain = ({"country": RunnablePassthrough()}
 combined_chain.invoke("대한민국")
 ```
 
-```
+```output
 {'capital': '대한민국의 수도는 서울입니다.',
  'population': '2023년 기준으로 대한민국의 인구는 약 5,100만 명 정도입니다. 하지만 인구는 지속적으로 변동하므로, 최신 통계는 대한민국 통계청이나 관련 기관의 공식 자료를 참고하는 것이 좋습니다.',
  'area': '대한민국의 면적은 약 100,210 평방킬로미터입니다. 이는 한반도의 남쪽 부분에 해당하며, 북한과 함께 한반도를 구성하고 있습니다.'}
@@ -308,11 +308,11 @@ print(get_today(None))
 RunnableLambda(get_today).invoke("")
 ```
 
-```
+```output
 Aug-04
 ```
 
-```
+```output
 'Aug-04'
 ```
 
@@ -327,11 +327,11 @@ print(get_text_length("pizza"))
 RunnableLambda(get_text_length).invoke("pizza")
 ```
 
-```
+```output
 5
 ```
 
-```
+```output
 5
 ```
 
@@ -349,11 +349,11 @@ print(concat_text("potato", "pizza"))
 RunnableLambda(_concat_text).invoke({"text1":"potato", "text2":"pizza"})
 ```
 
-```
+```output
 potato-pizza
 ```
 
-```
+```output
 'potato-pizza'
 ```
 
@@ -366,7 +366,7 @@ def concat_text(text1, text2):
 RunnableLambda(lambda _: concat_text(**_)).invoke({"text1":"potato", "text2":"pizza"})
 ```
 
-```
+```output
 'potato-pizza'
 ```
 
@@ -383,6 +383,6 @@ chain = (
 display(Markdown(chain.invoke("")))
 ```
 
-```
+```output
 <IPython.core.display.Markdown object>
 ```

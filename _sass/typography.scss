@@ -1,84 +1,85 @@
 // content area
 .content {
-	@include font-size(14);
-	padding: 0 2rem;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased !important;
-	-moz-font-smoothing: antialiased !important;
-	text-rendering: optimizelegibility !important;
-	text-align: justify;
-	@media #{$small} {
-		padding: 0 .5em;
-	}
+    @include font-size(14);
+    padding: 0 2rem;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-font-smoothing: antialiased !important;
+    text-rendering: optimizelegibility !important;
+    text-align: justify;
+    @media #{$small} {
+        padding: 0 0.5em;
+    }
 }
 
 // titles
 .title {
-	text-align: center;
-	font-weight: bold;
-	> p {
-		text-align: center;
-		font-weight: bold;
-	}
-	> a > p {
-		text-align: center;
-		font-weight: bold;
-	}
+    text-align: center;
+    font-weight: bold;
+    > p {
+        text-align: center;
+        font-weight: bold;
+    }
+    > a > p {
+        text-align: center;
+        font-weight: bold;
+    }
 }
 .post-title {
-	text-align: center;
-	font-weight: bold;
-	margin-bottom: 3rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 3rem;
 }
 
 // headings
 h3.title a {
-	color: $color_shark;
-	text-decoration: none;
+    color: $color_shark;
+    text-decoration: none;
 }
 
 // post list
 .post-list {
     text-align: left;
-	ul {
-		list-style: none;
-		padding-left: 0;
-	}
-	li {
-		padding: 10px 18px;
-		margin: 0 10px;
-		text-decoration: none;
-		background: $white;
-		color: $color_shark;
-		a {
-			@include font-rem(20);
-			text-decoration: none;
-			color: $color_shark;
-			font-weight: bolder;
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+    li {
+        padding: 10px 18px;
+        margin: 0 10px;
+        text-decoration: none;
+        background: $white;
+        color: $color_shark;
+        a {
+            @include font-rem(20);
+            text-decoration: none;
+            color: $color_shark;
+            font-weight: bolder;
             &:hover {
                 color: $red;
             }
-		}
-		p {
-			font-weight: lighter;
-			@include font-rem(16);
-		}
-	}
+        }
+        p {
+            font-weight: lighter;
+            @include font-rem(16);
+        }
+    }
 }
 
 // quotes
 blockquote {
-	font-family:$alt-font;
-	font-style:italic;
-	border-left:8px solid $color_tundora;
-	padding-left:20px;
-	margin: 0;
+    font-family: $alt-font;
+    // font-style:italic;
+    border-left: 8px solid $color_tundora;
+    padding: 0 10px;
+    margin: 0;
+    background-color: beige;
 }
-@media only screen and (min-width: 48em) {
-	blockquote {
-		margin-left:-28px
-	}
-}
+// @media only screen and (min-width: 48em) {
+//     blockquote {
+//         // margin-left: -28px;
+//     }
+// }
 
 // figcaption
 figcaption {
@@ -89,27 +90,28 @@ figcaption {
 
 // links
 a {
-  transition: color .4s;
-  color: $color_shark;
-  &:link {
-  	color: $color_shark;
-  }
-  &:visited {
-  	color: $color_tuatara;
-  }
-  &:hover {
-  	color: $red;
-  }
-  &:active {
-  	transition: color .3s;
-  	color: $maroon;
-  }
+    transition: color 0.4s;
+    color: $color_shark;
+    &:link {
+        color: $color_shark;
+    }
+    &:visited {
+        color: $color_tuatara;
+    }
+    &:hover {
+        color: $red;
+    }
+    &:active {
+        transition: color 0.3s;
+        color: $maroon;
+    }
 }
 
 // pre and code
-pre, code {
-	font-family: $font2;
-	overflow-x: auto;
+pre,
+code {
+    font-family: $font2;
+    overflow-x: auto;
 }
 p code,
 li code,
@@ -130,13 +132,13 @@ li .highlight pre {
 
 // table
 table {
-	width: 100%;
+    width: 100%;
 }
 
 // notice
 .notice {
     margin-top: 1.5em;
-    padding: .5em 1em;
+    padding: 0.5em 1em;
     text-indent: 0;
     @include font-rem(14);
     background-color: $color_gray;

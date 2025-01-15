@@ -30,21 +30,27 @@ prompt = PromptTemplate.from_template("{country}의 수도는 어디입니까?")
 prompt.invoke("대한민국")
 ```
 
-> StringPromptValue(text='대한민국의 수도는 어디입니까?')
+```output
+StringPromptValue(text='대한민국의 수도는 어디입니까?')
+```
 
 ```python
 prompt = PromptTemplate.from_template("{country}의 수도는 어디입니까?")
 prompt.invoke({"country":"대한민국"})
 ```
 
-> StringPromptValue(text='대한민국의 수도는 어디입니까?')
+```output
+StringPromptValue(text='대한민국의 수도는 어디입니까?')
+```
 
 ```python
 prompt = PromptTemplate.from_template("{country}의 수도는 어디입니까?")
 prompt.invoke({"input":"대한민국"})
 ```
 
-> KeyError: "Input to PromptTemplate is missing variables {'country'}. Expected: ['country'] Received: ['input']"
+```output
+KeyError: "Input to PromptTemplate is missing variables {'country'}. Expected: ['country'] Received: ['input']"
+```
 
 입력 인수가 1개면, `input_variables`의 key와 일치하도록 dict로 전달하거나, 그냥 value 값 하나만 전달할 수 있다.
 
@@ -57,7 +63,9 @@ prompt = PromptTemplate.from_template("{country}의 {info}는 얼마입니까?")
 prompt.invoke("대한민국")
 ```
 
-> TypeError: Expected mapping type as input to PromptTemplate. Received <class 'str'>.
+```output
+TypeError: Expected mapping type as input to PromptTemplate. Received <class 'str'>.
+```
 
 입력 인수가 2개 이상인 경우, dict type으로 인수를 전달하는 것이 강제된다.
 
@@ -68,6 +76,8 @@ model = ChatOpenAI(model='gpt-4-turbo-preview')
 model.invoke({"input":"Hi"})
 ```
 
-> ValueError: Invalid input type <class 'dict'>. Must be a PromptValue, str, or list of BaseMessages.
+```output
+ValueError: Invalid input type <class 'dict'>. Must be a PromptValue, str, or list of BaseMessages.
+```
 
 model 객체의 invoke는 `str` 또는 `PromptValue`, `BaseMessages`의 list만 입력 인수로 받을 수 있다. 그래서 단순한 경우(단순 `str` 문자열만 전달하는 경우)가 아닌 이상 model의 앞단에 prompt를 연결하게 된다.

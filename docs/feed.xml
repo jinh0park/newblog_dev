@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-01-15T22:03:47+09:00</updated><id>/</id><title type="html">JINH-ZERO-PARK</title><subtitle>Welcome.</subtitle><entry><title type="html">삽질의 추억</title><link href="/rn-sapjil/" rel="alternate" type="text/html" title="삽질의 추억" /><published>2024-12-28T17:43:00+09:00</published><updated>2024-12-28T17:43:00+09:00</updated><id>/rn-sapjil</id><content type="html" xml:base="/rn-sapjil/">&lt;p&gt;방학을 맞아 React Native를 배우고 이것 저것 만들어보고 있다.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2025-01-16T00:36:33+09:00</updated><id>/</id><title type="html">JINH-ZERO-PARK</title><subtitle>Welcome.</subtitle><entry><title type="html">삽질의 추억</title><link href="/rn-sapjil/" rel="alternate" type="text/html" title="삽질의 추억" /><published>2024-12-28T17:43:00+09:00</published><updated>2024-12-28T17:43:00+09:00</updated><id>/rn-sapjil</id><content type="html" xml:base="/rn-sapjil/">&lt;p&gt;방학을 맞아 React Native를 배우고 이것 저것 만들어보고 있다.&lt;/p&gt;
 
 &lt;p&gt;채찍피티의 도움으로 쉽고 재미있게 코딩을 하고 있었는데… 어제부터 오늘까지 24시간 동안 날 괴롭힌 오류가 발생했다.&lt;/p&gt;
 
@@ -18,27 +18,29 @@
 
 &lt;p&gt;그랬더니, 컴포넌트 안쪽에서 아래와 비슷한 구조가 발견되었다.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-jsx&quot;&gt;{list.map((item, index)=&amp;gt;(
-  &amp;lt;&amp;gt;
-    &amp;lt;Text item={item} key={index}&amp;gt;&amp;lt;Text&amp;gt;
-    {item.anotherList.map((item, index)=&amp;gt;(
-      &amp;lt;Text&amp;gt;&amp;lt;/Text&amp;gt;
-      ))}
-  &amp;lt;/&amp;gt;
-  ))}
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Text&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;anotherList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/Text&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;      &lt;span class=&quot;p&quot;&gt;))}&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;))}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;이 코드를 대충 봤을 때는 &lt;code class=&quot;highlighter-rouge&quot;&gt;key&lt;/code&gt; 를 잘 지정해준 것으로 보이지만, 잘 보면 &lt;code class=&quot;highlighter-rouge&quot;&gt;map&lt;/code&gt; 의 반환값의 최상위 태그가 아닌 그 하위 태그에 &lt;code class=&quot;highlighter-rouge&quot;&gt;key&lt;/code&gt; 가 설정되어 있었다. 이를 아래와 같이 고치니 오류가 해결되었다.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-jsx&quot;&gt;{list.map((item, index)=&amp;gt;(
-  &amp;lt;View key={index}&amp;gt;
-    &amp;lt;Text item={item}&amp;gt;&amp;lt;Text&amp;gt;
-    {item.anotherList.map((item, index)=&amp;gt;(
-      &amp;lt;Text&amp;gt;&amp;lt;/Text&amp;gt;
-      ))}
-  &amp;lt;/View&amp;gt;
-  ))}
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;View&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Text&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;anotherList&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;item&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/Text&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;      &lt;span class=&quot;p&quot;&gt;))}&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/View&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;))}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
 &lt;p&gt;사후적으로 보면 정말 간단한 문제였는데, 에러 메세지가 가리키는 라인이 정확한 곳을 가리키지 않아 오류의 원인을 찾을 수 없었다.
 타입스크립트를 쓰면 이런걸 해결할 수 있나? 넘어가기 귀찮은데…&lt;/p&gt;
@@ -59,12 +61,11 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;
 [1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m24.1.2[0m[39;49m -&amp;gt; [0m[32;49m24.2[0m
 [1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m To update, run: [0m[32;49mpip install --upgrade pip[0m
 Note: you may need to restart the kernel to use updated packages.
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;langchain_community.document_loaders&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PyPDFLoader&lt;/span&gt;
 
@@ -84,7 +85,7 @@ Note: you may need to restart the kernel to use updated packages.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;제1편  제 1 장  통 칙
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;제1편  제 1 장  통 칙
 3
 제1편   총   칙
 제1장   통  칙
@@ -102,7 +103,6 @@ Note: you may need to restart the kernel to use updated packages.
   [6] 대법원이 ‘공동선조와 성과 본을 같이 하는 후손은 성별의 구별 없이 성년이 되면 당연히 그
 구성원이 된다.’고
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;빠른 테스트를 위해 첫 10장만 가지고 lite version을 만들어 테스트해본다. 반복적으로 나타나는 “변호사시험의 자격시험을 위한 민법 표준판례연구”와 같은 머릿말이나, 머릿말 다음으로 오는 쪽번호를 제거해줄 필요가 있다.&lt;/p&gt;
 
@@ -145,9 +145,8 @@ Note: you may need to restart the kernel to use updated packages.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;779890
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;779890
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;머릿말(~5page)과 색인(뒤에서 24page까지)를 제외한 본문 부분을 하나로 연결하여 &lt;code class=&quot;highlighter-rouge&quot;&gt;content&lt;/code&gt; 변수에 저장하였다. 총 779890 토큰에 해당하는 긴 텍스트 문서가 되었다.&lt;/p&gt;
 
@@ -159,12 +158,11 @@ Note: you may need to restart the kernel to use updated packages.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;
 [1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m24.1.2[0m[39;49m -&amp;gt; [0m[32;49m24.2[0m
 [1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m To update, run: [0m[32;49mpip install --upgrade pip[0m
 Note: you may need to restart the kernel to use updated packages.
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;langchain_text_splitters&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CharacterTextSplitter&lt;/span&gt;
 
@@ -184,7 +182,7 @@ Note: you may need to restart the kernel to use updated packages.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;제  1  장   통  칙
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;제  1  장   통  칙
 제 2 장  인
 제  3  장   법  인제  4  장   물  건제 5 장  법률행위제 6 장  소멸시효
 
@@ -192,17 +190,15 @@ Note: you may need to restart the kernel to use updated packages.
 제1편   총   칙
 제1장   통  칙
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;texts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])))&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;## should be less than 8192&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;texts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;4095
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;4095
 935
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;분할된 chunk의 최대 길이는 4095이고, chunk(판례)의 개수는 총 935개이다.&lt;/p&gt;
 
@@ -210,7 +206,7 @@ Note: you may need to restart the kernel to use updated packages.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;### 합유 (1)：합유지분의 승계
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;### 합유 (1)：합유지분의 승계
 (대법원 1996. 12. 10. 선고 96다23238 판결 )
 &amp;lt;쟁점&amp;gt;
   합유자 중 일부가 사망한 경우의 소유권 귀속관계
@@ -228,14 +224,13 @@ Note: you may need to restart the kernel to use updated packages.
 자가 2인 이상이면 잔존 합유자의 합유로, 잔존 합유자가 1인이면 그의 단독소유로 각각 귀속함을
 밝힌 판결
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;texts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;제  1  장   통  칙
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;제  1  장   통  칙
 ### 민법의 법원：관습법 (1)
 ### 민법의 법원：관습법 (2)
 ### 민법의 법원： 헌법
@@ -256,7 +251,6 @@ Note: you may need to restart the kernel to use updated packages.
 ### 의사능력
 ### 미성년자의 행위능력 (1)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;Chunk 중 무작위로 하나를 골라 출력해보고, Chunk의 맨 첫줄을 출력해보면 잘 분할되었음을 확인할 수 있다.&lt;/p&gt;
 
@@ -307,17 +301,15 @@ Note: you may need to restart the kernel to use updated packages.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;(935,)
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;(935,)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;sim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argsort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:]]&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;array([0.66670259, 0.66787872, 0.67578467, 0.69705162, 0.71646718])
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;array([0.66670259, 0.66787872, 0.67578467, 0.69705162, 0.71646718])
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;retrieved&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;texts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;np&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;argsort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:]]&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;retrieved&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
@@ -342,7 +334,7 @@ Note: you may need to restart the kernel to use updated packages.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;###  임차인의 비용상환청구권과 유치권의 성립
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;###  임차인의 비용상환청구권과 유치권의 성립
 (대법원 1975. 4. 22. 선고 73다2010 판결 )
 &amp;lt;쟁점&amp;gt;
   임대차종료시에 임차인이 건물을 원상으로 복구하여 임대인에게 명도키로 약정한 경우에 비용상
@@ -361,7 +353,6 @@ Note: you may need to restart the kernel to use updated packages.
 신적 행위라고 할 수 없는 특별한 사정이 있는 경우, 임대
 
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;vectorstore는 &lt;code class=&quot;highlighter-rouge&quot;&gt;.as_retriever()&lt;/code&gt; 메소드를 통해 LangChain에서 Chain으로 이어붙일 수 있는 Runnable 객체로 변환할 수 있다.&lt;/p&gt;
 
@@ -373,12 +364,11 @@ Note: you may need to restart the kernel to use updated packages.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[Document(page_content='### 사해행위 (3)：신탁자의 신탁재산의 처분행위\n(대법원 2016. 7. 29. 선고 2015다56086 판결 )\n&amp;lt;쟁점&amp;gt;\n  1. 유효인 부부간 명의신탁에서 명의신탁관계가 종료된 경우, 신탁자의 수탁자에 대한 소유권이\n전등기청구권이 신탁자의 책임재산이 되는지 여부\n  2. 신탁자가 유효한 명의신탁약정을 해지함을 전제로 신탁된 부동산을 제3자에게 직접 처분하면\n서 수탁자에게서 곧바로 제3자 앞으로 소유권이전등기를 마쳐 주는 것이 사해행위에 해당하는지 \n여부\n&amp;lt;판결요지&amp;gt;\n  부부간의 명의신탁약정은 특별한 사정이 없는 한 유효하고(부동산 실권리자명의 등기에 관한 법\n률 제8조 참조), 이때 명의신탁자는 명의수탁자에 대하여 신탁해지를 하고 신탁관계의 종료 그것만\n을 이유로 하여 소유 명의의 이전등기절차의 이행을 청구할 수 있음은 물론, 신탁해지를 원인으로 \n하고 소유권에 기해서도 그와 같은 청구를 할 수 있는데, 이와 같이 명의신탁관계가 종료된 경우 \n신탁자의 수탁자에 대한 소유권이전등기청구권은 신탁자의 일반채권자들에게 공동담보로 제공되는 \n책임재산이 된다. 그런데 신탁자가 유효한 명의신탁약정을 해지함을 전제로 신탁된 부동산을 제 3\n자에게 직접 처분하면서 수탁자 및 제3자와의 합의 아래 중간등기를 생략하고 수탁자에게서 곧바\n로 제3자 앞으로 소유권이전등기를 마쳐 준 경우 이로 인하여 신탁자의 책임재산인 수탁자에 대한 \n소유권이전등기청구권이 소멸하게 되므로, 이로써 신탁자의 소극재산이 적극재산을 초과하게 되거\n나 채무초과상태가 더 나빠지게 되고 신탁자도 그러한 사실을 인식하고 있었다면 이러한 신탁자의 \n법률행위는 신탁자의 일반채권자들을 해하는 행위로서 사해행위에 해당한다 .\n&amp;lt;판례선정이유&amp;gt; \n 신탁자가 유효한 명의신탁약정을 해지함을 전제로 신탁된 부동산을 제3자에게 직접 처분하면서 \n수탁자에게서 곧바로 제3자 앞으로 소유권이전등기를 마쳐 주는 것이 사행행위에 해당한다고 본 \n판결'),
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;[Document(page_content='### 사해행위 (3)：신탁자의 신탁재산의 처분행위\n(대법원 2016. 7. 29. 선고 2015다56086 판결 )\n&amp;lt;쟁점&amp;gt;\n  1. 유효인 부부간 명의신탁에서 명의신탁관계가 종료된 경우, 신탁자의 수탁자에 대한 소유권이\n전등기청구권이 신탁자의 책임재산이 되는지 여부\n  2. 신탁자가 유효한 명의신탁약정을 해지함을 전제로 신탁된 부동산을 제3자에게 직접 처분하면\n서 수탁자에게서 곧바로 제3자 앞으로 소유권이전등기를 마쳐 주는 것이 사해행위에 해당하는지 \n여부\n&amp;lt;판결요지&amp;gt;\n  부부간의 명의신탁약정은 특별한 사정이 없는 한 유효하고(부동산 실권리자명의 등기에 관한 법\n률 제8조 참조), 이때 명의신탁자는 명의수탁자에 대하여 신탁해지를 하고 신탁관계의 종료 그것만\n을 이유로 하여 소유 명의의 이전등기절차의 이행을 청구할 수 있음은 물론, 신탁해지를 원인으로 \n하고 소유권에 기해서도 그와 같은 청구를 할 수 있는데, 이와 같이 명의신탁관계가 종료된 경우 \n신탁자의 수탁자에 대한 소유권이전등기청구권은 신탁자의 일반채권자들에게 공동담보로 제공되는 \n책임재산이 된다. 그런데 신탁자가 유효한 명의신탁약정을 해지함을 전제로 신탁된 부동산을 제 3\n자에게 직접 처분하면서 수탁자 및 제3자와의 합의 아래 중간등기를 생략하고 수탁자에게서 곧바\n로 제3자 앞으로 소유권이전등기를 마쳐 준 경우 이로 인하여 신탁자의 책임재산인 수탁자에 대한 \n소유권이전등기청구권이 소멸하게 되므로, 이로써 신탁자의 소극재산이 적극재산을 초과하게 되거\n나 채무초과상태가 더 나빠지게 되고 신탁자도 그러한 사실을 인식하고 있었다면 이러한 신탁자의 \n법률행위는 신탁자의 일반채권자들을 해하는 행위로서 사해행위에 해당한다 .\n&amp;lt;판례선정이유&amp;gt; \n 신탁자가 유효한 명의신탁약정을 해지함을 전제로 신탁된 부동산을 제3자에게 직접 처분하면서 \n수탁자에게서 곧바로 제3자 앞으로 소유권이전등기를 마쳐 주는 것이 사행행위에 해당한다고 본 \n판결'),
  Document(page_content='### 채권자취소권의 행사 (3)：일부의 사해행위와 원상회복 방법\n(대법원 2006. 12. 7. 선고 2006다43620 판결 )\n&amp;lt;쟁점&amp;gt;\n  근저당권설정계약 중 일부만이 사해행위에 해당하는 경우, 원상회복의 방법\n&amp;lt;판결요지&amp;gt;\n  사해행위의 취소에 따른 원상회복은 원칙적으로 그 목적물 자체의 반환에 의하여야 하고, 그것\n이 불가능하거나 현저히 곤란한 경우에 한하여 예외적으로 가액배상에 의하여야 하는바, 근저당권\n설정계약 중 일부만이 사해행위에 해당하는 경우에는 그 원상회복은 근저당권설정등기의 채권최고\n액을 감축하는 근저당권변경등기절차의 이행을 명하는 방법에 의하여야 한다 .\n&amp;lt;판례선정이유&amp;gt; \n  근저당권설정계약 중 일부가 사해행위에 해당하는 경우, 그 원상회복의 방법에 대하여 검토하고 \n있는 판결'),
  Document(page_content='### 사해행위 (4)：상속재산 분할협의\n(대법원 2001. 2. 9. 선고 2000다51797 판결 )\n&amp;lt;쟁점&amp;gt;\n  채무초과 상태에 있는 채무자가 상속재산의 분할협의를 하면서 상속재산에 관한 권리를 포기함\n으로써 일반 채권자에 대한 공동담보가 감소되는 경우, 사해행위 취소의 범위\n&amp;lt;판결요지&amp;gt;\n  [1] 상속재산의 분할협의는 상속이 개시되어 공동상속인 사이에 잠정적 공유가 된 상속재산에 대\n하여 그 전부 또는 일부를 각 상속인의 단독소유로 하거나 새로운 공유관계로 이행시킴으로써 상\n속재산의 귀속을 확정시키는 것으로 그 성질상 재산권을 목적으로 하는 법률행위이므로 사해행위\n취소권 행사의 대상이 될 수 있다 . \n  [2] 채무초과 상태에 있는 채무자가 상속재산의 분할협의를 하면서 상속재산에 관한 권리를 포기\n함으로써 결과적으로 일반 채권자에 대한 공동담보가 감소되었다 하더라도, 그 재산분할결과가 채\n무자의 구체적 상속분에 상당하는 정도에 미달하는 과소한 것이라고 인정되지 않는 한 사해행위로\n서 취소되어야 할 것은 아니고, 구체적 상속분에 상당하는 정도에 미달하는 과소한 경우에도 사해\n행위로서 취소되는 범위는 그 미달하는 부분에 한정하여야 한다 . \n&amp;lt;판례선정이유&amp;gt; \n  상속재산의 분할협의가 사해행위취소권 행사의 대상이 되는지 여부 및 사해행위 취소의 범위를 \n검토하고 있는 판결'),
  Document(page_content='###  불법행위에 대한 금지청구 (2)： 통행방해 \n(대법원 2021. 10. 14. 선고 2021다242154 판결 )\n&amp;lt;쟁점&amp;gt;\n  일반 공중의 통행에 공용된 도로 통행을 방해함으로써 특정인의 통행 자유를 침해한 경우, 민법\n상 불법행위에 해당하는지 여부 및 이때 침해를 받은 자가 통행방해 행위 금지를 소구할 수 있는\n지 여부\n&amp;lt;판결요지&amp;gt;\n  불특정 다수인인 일반 공중의 통행에 공용된 도로, 즉 공로(公路)를 통행하고자 하는 자는 그 도\n로에 관하여 다른 사람이 가지는 권리 등을 침해한다는 등의 특별한 사정이 없는 한, 일상생활상 \n필요한 범위 내에서 다른 사람들과 같은 방법으로 그 도로를 통행할 자유가 있다. 제3자가 특정인\n에 대하여만 그 도로의 통행을 방해함으로써 일상생활에 지장을 받게 하는 등의 방법으로 특정인\n의 통행 자유를 침해하였다면 민법상 불법행위에 해당하고, 침해를 받은 자로서는 방해의 배제나 \n장래에 생길 방해를 예방하기 위하여 통행방해 행위의 금지를 소구할 수 있다 .\n&amp;lt;판례선정이유&amp;gt;\n  특정인의 공로 통행 자유를 침해하면 민법상 불법행위에 해당할 수 있고, 이때 침해를 받은 자\n가 방해배제나 예방을 위하여 통행방해 행위 금지를 소구할 수 있음을 밝힌 판결')]
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;embedding도 API cost를 발생시키기 때문에, 한번 만들어놓고 vector store를 로컬에 저장하여 재사용하는 것이 좋다.&lt;/p&gt;
 
@@ -397,7 +387,7 @@ Note: you may need to restart the kernel to use updated packages.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;###  임차인의 비용상환청구권과 유치권의 성립
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;###  임차인의 비용상환청구권과 유치권의 성립
 (대법원 1975. 4. 22. 선고 73다2010 판결 )
 &amp;lt;쟁점&amp;gt;
   임대차종료시에 임차인이 건물을 원상으로 복구하여 임대인에게 명도키로 약정한 경우에 비용상
@@ -416,7 +406,6 @@ Note: you may need to restart the kernel to use updated packages.
 신적 행위라고 할 수 없는 특별한 사정이 있는 경우, 임대
 
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h1 id=&quot;rag-chain-구성&quot;&gt;RAG Chain 구성&lt;/h1&gt;
 
@@ -459,28 +448,65 @@ Note: you may need to restart the kernel to use updated packages.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
+&lt;h1 id=&quot;chain-실행&quot;&gt;Chain 실행&lt;/h1&gt;
+
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;question&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;사해행위 취소로 인한 원상회복으로 부동산을 반환하는 경우 그 사용이익의 반환여부?&quot;&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;# 질문 &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;question&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;doc&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;retriever&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;invoke&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;question&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;# 참고 판례&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;doc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;page_content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;# 답변&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;doc&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;enumerate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;retriever&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;invoke&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;question&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;# 참고 판례 {(i+1)}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;doc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;page_content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;# 답변&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;invoke&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;question&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# 질문
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;# 질문
 사해행위 취소로 인한 원상회복으로 부동산을 반환하는 경우 그 사용이익의 반환여부?
-# 참고 판례
+
+
+# 참고 판례 (1)
 ### 채권자취소권의 행사 (5)：원상회복 시 사용이익의 반환 여부
 (대법원 2008. 12. 11. 선고 2007다69162 판결 )
 &amp;lt;쟁점&amp;gt;
-  사해행위 취소로 인한 원상회복으
-# 참고 판례
+  사해행위 취소로 인한 원상회복으로 부동산을 반환하는 경우에 그 사용이익이나 임료상당액도
+반환해야 하는지 여부
+&amp;lt;판결요지&amp;gt;
+  채권자취소권은 채무자가 채권자를 해함을 알면서 일반재산을 감소시키는 행위를 한 경우에 그
+행위를 취소하여 채무자의 재산을 원상회복시킴으로써 채무자의 책임재산을 보전하기 위하여 인정
+된 권리로서, 사해행위의 취소 및 원상회복은 책임재산의 보전을 위하여 필요한 범위 내로 한정되
+어야 하므로 원래의 책임재산을 초과하는 부분까지 원상회복의 범위에 포함된다고 볼 수 없다. 따
+라서 부동산에 관한 법률행위가 사해행 위에 해당하여 제406조 제1항에 의하여 취소된 경우에 수
+익자 또는 전득자가 사해행위 이후 그 부동산을 직접 사용하거나 제3자에게 임대하였다고 하더라
+도, 당초 채권자의 공동담보를 이루는 채무자의 책임재산은 당해 부동산이었을 뿐 수익자 또는 전
+득자가 그 부동산을 사용함으로써 얻은 사용이익이나 임차인으로부터 받은 임료상당액까지 채무자
+의 책임재산이었다고 볼 수 없으므로 수익자 등이 원상회복으로서 당해 부동산을 반환하는 이외에
+그 사용이익이나 임료상당액을 반환해야 하는 것은 아니다 .
+&amp;lt;판례선정이유&amp;gt;
+  사해행위 취소로 인한 원상회복으로 부동산을 반환하는 경우에 그 사용이익이나 임료상당액도
+반환해야 하는지 여부를 검토한 판결
+
+
+# 참고 판례 (2)
 ### 대상청구권
 (대법원 2012. 6. 28. 선고 2010다71431 판결
 &amp;lt;쟁점&amp;gt;
-  사해행위취소소송에서 원물반환으로 근저당권설정등기의 말소를 구하여 승소판결이 확정되었
+  사해행위취소소송에서 원물반환으로 근저당권설정등기의 말소를 구하여 승소판결이 확정되었는
+데, 부동산이 담보권 실행을 위한 경매절차에 의하여 매각됨으로써 확정판결에 기한 수익자의 근저
+당권설정등기 말소등기절차의무가 이행불능된 경우에 대상청구권이 인정되는지 여부
+&amp;lt;판결요지&amp;gt;
+  [1] 우리 민법이 이행불능의 효과로서 채권자의 전보배상청구권과 계약해제권 외에 별도로 대상
+청구권을 규정하고 있지 않으나 해석상 대상청구권을 부정할 이유는 없다 .
+  [2] 신용보증기금이 갑 주식회사를 상대로 제기한 사해행위취소소송에서 원물반환으로 근저당권
+설정등기의 말소를 구하여 승소판결이 확정되었는데, 그 후 해당 부동산이 관련 경매사건에서 담보
+권 실행을 위한 경매절차를 통하여 제3자에게 매각된 사안에서, 위와 같이 부동산이 담보권 실행
+을 위한 경매절차에 의하여 매각됨으로써 확정판결에 기한 갑 회사의 근저당권설정등기 말소등기
+절차의무가 이행불능된 경우, 신용보증기금은 대상청구권 행사로서 갑 회사가 말소될 근저당권설정
+등기에 기한 근저당권자로서 지급받은 배당금의 반환을 청구할 수 있다고 한 사례
+&amp;lt;판례선정이유&amp;gt;
+ 채권자취소사해행위취소소송에서의 피고인 수익자의 원물반환채무의 이행이 불능이 된 경우에도
+대상청구권을 인정할 수 있다고 설시한 판결
+
+
 # 답변
 사해행위 취소로 인한 원상회복으로 부동산을 반환하는 경우, 그 사용이익이나 임료상당액을 반환해야 하는지 여부에 대해 대법원은 다음과 같이 판시하였습니다.
 
@@ -489,22 +515,7 @@ Note: you may need to restart the kernel to use updated packages.
 따라서 부동산에 관한 법률행위가 사해행위에 해당하여 민법 제406조 제1항에 의하여 취소된 경우에 수익자 또는 전득자가 사해행위 이후 그 부동산을 직접 사용하거나 제3자에게 임대하였다고 하더라도, 당초 채권자의 공동담보를 이루는 채무자의 책임재산은 당해 부동산이었을 뿐, 수익자 또는 전득자가 그 부동산을 사용함으로써 얻은 사용이익이나 임차인으로부터 받은 임료상당액까지 채무자의 책임재산이었다고 볼 수 없으므로, 수익자 등이 원상회복으로서 당해 부동산을 반환하는 이외에 그 사용이익이나 임료상당액을 반환해야 하는 것은 아닙니다.
 
 참조한 판례번호: 대법원 2008. 12. 11. 선고 2007다69162 판결
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;question&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;사해행위 취소로 인한 원상회복으로 부동산을 반환하는 경우 그 사용이익의 반환여부?&quot;&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Markdown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;# 질문 &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;question&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;doc&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;retriever&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;invoke&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;question&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Markdown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;# 참고 판례&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Markdown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;doc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;page_content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;400&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])))&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Markdown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;# 답변&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;display&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Markdown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;invoke&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;question&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><summary type="html">RAG를 적용한 첫번째 프로젝트로, “민법 표준판례연구”를 참고하여 법률적 질문에 대해 답을 줄 수 있는 언어 모델을 구축해보고자 하였다.</summary></entry><entry><title type="html">LangChain predict() vs. invoke()</title><link href="/langchain-predict-invoke/" rel="alternate" type="text/html" title="LangChain predict() vs. invoke()" /><published>2024-08-03T22:43:00+09:00</published><updated>2024-08-03T22:43:00+09:00</updated><id>/langchain-predict-invoke</id><content type="html" xml:base="/langchain-predict-invoke/">&lt;h1 id=&quot;predict-vs-invoke&quot;&gt;predict() vs. invoke()&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;</content><summary type="html">RAG를 적용한 첫번째 프로젝트로, “민법 표준판례연구”를 참고하여 법률적 질문에 대해 답을 줄 수 있는 언어 모델을 구축해보고자 하였다.</summary></entry><entry><title type="html">LangChain predict() vs. invoke()</title><link href="/langchain-predict-invoke/" rel="alternate" type="text/html" title="LangChain predict() vs. invoke()" /><published>2024-08-03T22:43:00+09:00</published><updated>2024-08-03T22:43:00+09:00</updated><id>/langchain-predict-invoke</id><content type="html" xml:base="/langchain-predict-invoke/">&lt;h1 id=&quot;predict-vs-invoke&quot;&gt;predict() vs. invoke()&lt;/h1&gt;
 
 &lt;p&gt;테디 노트님의 [&lt;랭체인LangChain 노트=&quot;&quot;&gt; - LangChain 한국어 튜토리얼🇰🇷](https://wikidocs.net/book/14314) 을 보고 공부하던 중, chain을 실행할 때 어떨 때는 `invoke()`를 쓰고 어떨때는 `predict()`를 써서 둘의 차이가 무엇인지 찾아보았다.&lt;/랭체인LangChain&gt;&lt;/p&gt;
 
@@ -530,27 +541,24 @@ Code that has better alternatives available and will eventually be removed, so t
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;StringPromptValue(text=’대한민국의 수도는 어디입니까?’)&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;StringPromptValue(text='대한민국의 수도는 어디입니까?')
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;prompt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PromptTemplate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;from_template&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{country}의 수도는 어디입니까?&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;prompt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;invoke&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;country&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;대한민국&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;StringPromptValue(text=’대한민국의 수도는 어디입니까?’)&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;StringPromptValue(text='대한민국의 수도는 어디입니까?')
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;prompt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;PromptTemplate&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;from_template&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{country}의 수도는 어디입니까?&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;prompt&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;invoke&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;input&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;대한민국&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;KeyError: “Input to PromptTemplate is missing variables {‘country’}. Expected: [‘country’] Received: [‘input’]”&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;KeyError: &quot;Input to PromptTemplate is missing variables {'country'}. Expected: ['country'] Received: ['input']&quot;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;입력 인수가 1개면, &lt;code class=&quot;highlighter-rouge&quot;&gt;input_variables&lt;/code&gt;의 key와 일치하도록 dict로 전달하거나, 그냥 value 값 하나만 전달할 수 있다.&lt;/p&gt;
 
@@ -563,9 +571,8 @@ Code that has better alternatives available and will eventually be removed, so t
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;TypeError: Expected mapping type as input to PromptTemplate. Received &amp;lt;class ‘str’&amp;gt;.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;TypeError: Expected mapping type as input to PromptTemplate. Received &amp;lt;class 'str'&amp;gt;.
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;입력 인수가 2개 이상인 경우, dict type으로 인수를 전달하는 것이 강제된다.&lt;/p&gt;
 
@@ -576,9 +583,8 @@ Code that has better alternatives available and will eventually be removed, so t
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;ValueError: Invalid input type &amp;lt;class ‘dict’&amp;gt;. Must be a PromptValue, str, or list of BaseMessages.&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;ValueError: Invalid input type &amp;lt;class 'dict'&amp;gt;. Must be a PromptValue, str, or list of BaseMessages.
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;model 객체의 invoke는 &lt;code class=&quot;highlighter-rouge&quot;&gt;str&lt;/code&gt; 또는 &lt;code class=&quot;highlighter-rouge&quot;&gt;PromptValue&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;BaseMessages&lt;/code&gt;의 list만 입력 인수로 받을 수 있다. 그래서 단순한 경우(단순 &lt;code class=&quot;highlighter-rouge&quot;&gt;str&lt;/code&gt; 문자열만 전달하는 경우)가 아닌 이상 model의 앞단에 prompt를 연결하게 된다.&lt;/p&gt;</content><summary type="html">predict() vs. invoke()</summary></entry><entry><title type="html">LangChain 라이브러리로 시작하는 LLM과 Prompt Engineering</title><link href="/langchain-lcel/" rel="alternate" type="text/html" title="LangChain 라이브러리로 시작하는 LLM과 Prompt Engineering" /><published>2024-08-03T22:43:00+09:00</published><updated>2024-08-03T22:43:00+09:00</updated><id>/langchain-lcel</id><content type="html" xml:base="/langchain-lcel/">&lt;head&gt;
   &lt;style&gt;
@@ -713,9 +719,8 @@ font-size: 1.0rem !important;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[답변]: content='대한민국의 수도는 서울입니다.' response_metadata={'token_usage': {'completion_tokens': 8, 'prompt_tokens': 16, 'total_tokens': 24}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_0f03d4f0ee', 'finish_reason': 'stop', 'logprobs': None} id='run-4202b29e-4843-4a65-9de9-4591dc0852d3-0' usage_metadata={'input_tokens': 16, 'output_tokens': 8, 'total_tokens': 24}
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;[답변]: content='대한민국의 수도는 서울입니다.' response_metadata={'token_usage': {'completion_tokens': 8, 'prompt_tokens': 16, 'total_tokens': 24}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_0f03d4f0ee', 'finish_reason': 'stop', 'logprobs': None} id='run-4202b29e-4843-4a65-9de9-4591dc0852d3-0' usage_metadata={'input_tokens': 16, 'output_tokens': 8, 'total_tokens': 24}
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h2 id=&quot;chain과-lcellangchain-expression-language&quot;&gt;Chain과 LCEL(LangChain Expression Language)&lt;/h2&gt;
 
@@ -748,26 +753,23 @@ font-size: 1.0rem !important;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;first=PromptTemplate(input_variables=['country'], template='{country}의 수도는 어디입니까?') middle=[ChatOpenAI(client=&amp;lt;openai.resources.chat.completions.Completions object at 0x10e60bc50&amp;gt;, async_client=&amp;lt;openai.resources.chat.completions.AsyncCompletions object at 0x10e617590&amp;gt;, model_name='gpt-4o-mini', temperature=0.1, openai_api_key=SecretStr('**********'), openai_proxy='')] last=StrOutputParser()
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;first=PromptTemplate(input_variables=['country'], template='{country}의 수도는 어디입니까?') middle=[ChatOpenAI(client=&amp;lt;openai.resources.chat.completions.Completions object at 0x10e60bc50&amp;gt;, async_client=&amp;lt;openai.resources.chat.completions.AsyncCompletions object at 0x10e617590&amp;gt;, model_name='gpt-4o-mini', temperature=0.1, openai_api_key=SecretStr('**********'), openai_proxy='')] last=StrOutputParser()
 &amp;lt;class 'langchain_core.runnables.base.RunnableSequence'&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;chain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;langchain_core.runnables.base.RunnableSequence
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;langchain_core.runnables.base.RunnableSequence
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;chain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;invoke&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;country&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;대한민국&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;'대한민국의 수도는 서울입니다.'
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;'대한민국의 수도는 서울입니다.'
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;타입에서 알 수 있듯이 &lt;code class=&quot;highlighter-rouge&quot;&gt;chain&lt;/code&gt;은 &lt;code class=&quot;highlighter-rouge&quot;&gt;Runnable&lt;/code&gt;의 sequence이다. &lt;code class=&quot;highlighter-rouge&quot;&gt;prompt&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;model&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;parser&lt;/code&gt;도 특정한 기능을 수행하고 있는 &lt;code class=&quot;highlighter-rouge&quot;&gt;Runnable&lt;/code&gt;의 한 종류이다. 그렇기 때문에 아래 코드에서 각 요소들도 개별적으로 &lt;code class=&quot;highlighter-rouge&quot;&gt;invoke()&lt;/code&gt; method를 호출 가능함을 확인할 수 있다.&lt;/p&gt;
 
@@ -778,11 +780,10 @@ font-size: 1.0rem !important;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;text='대한민국의 수도는 어디입니까?'
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;text='대한민국의 수도는 어디입니까?'
 content='대한민국의 수도는 서울입니다.' response_metadata={'token_usage': {'completion_tokens': 8, 'prompt_tokens': 13, 'total_tokens': 21}, 'model_name': 'gpt-4o-mini-2024-07-18', 'system_fingerprint': 'fp_0f03d4f0ee', 'finish_reason': 'stop', 'logprobs': None} id='run-9c6f9ff5-699c-40ef-ac25-28cc70f33f5a-0' usage_metadata={'input_tokens': 13, 'output_tokens': 8, 'total_tokens': 21}
 대한민국의 수도는 서울입니다.
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;h2 id=&quot;runnable&quot;&gt;Runnable&lt;/h2&gt;
 
@@ -815,13 +816,11 @@ content='대한민국의 수도는 서울입니다.' response_metadata={'token_u
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;True
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;True
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;StringPromptValue(text='대한민국의 수도는?')
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;StringPromptValue(text='대한민국의 수도는?')
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;assign()&lt;/code&gt; method를 이용하여, input으로 받은 &lt;code class=&quot;highlighter-rouge&quot;&gt;dict&lt;/code&gt;에 새로운 키-밸류 쌍을 추가할 수 있다.&lt;/p&gt;
 
@@ -830,9 +829,8 @@ content='대한민국의 수도는 서울입니다.' response_metadata={'token_u
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'country':&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'대한민국',&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'city':&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'서울',&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'address':&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'대한민국&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;서울'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;{'country': '대한민국', 'city': '서울', 'address': '대한민국 서울'}
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&quot;runnableparallel&quot;&gt;RunnableParallel&lt;/h3&gt;
 
@@ -844,9 +842,8 @@ content='대한민국의 수도는 서울입니다.' response_metadata={'token_u
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'out1':&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;1,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'out2':&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;2,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'out3':&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;{'out1': 1, 'out2': 2, 'out3': 3}
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;RunnableParallel&lt;/code&gt;을 이용하여 여러 개의 chain을 병렬적으로 연결할 수 있다.&lt;/p&gt;
 
@@ -870,11 +867,10 @@ content='대한민국의 수도는 서울입니다.' response_metadata={'token_u
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'capital':&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'대한민국의&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;수도는&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;서울입니다.',&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
- &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'population':&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'2023년&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;기준으로&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;대한민국의&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;인구는&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;약&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;5,100만&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;명&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;정도입니다.&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;하지만&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;인구는&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;지속적으로&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;변동하므로,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;최신&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;통계는&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;대한민국&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;통계청이나&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;관련&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;기관의&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;공식&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;자료를&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;참고하는&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;것이&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;좋습니다.',&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
- &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'area':&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'대한민국의&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;면적은&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;약&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;100,210&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;평방킬로미터입니다.&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;이는&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;한반도의&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;남쪽&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;부분에&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;해당하며,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;북한과&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;함께&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;한반도를&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;구성하고&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;있습니다.'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;{'capital': '대한민국의 수도는 서울입니다.',
+ 'population': '2023년 기준으로 대한민국의 인구는 약 5,100만 명 정도입니다. 하지만 인구는 지속적으로 변동하므로, 최신 통계는 대한민국 통계청이나 관련 기관의 공식 자료를 참고하는 것이 좋습니다.',
+ 'area': '대한민국의 면적은 약 100,210 평방킬로미터입니다. 이는 한반도의 남쪽 부분에 해당하며, 북한과 함께 한반도를 구성하고 있습니다.'}
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&quot;runnablelambda&quot;&gt;RunnableLambda&lt;/h3&gt;
 
@@ -895,13 +891,11 @@ content='대한민국의 수도는 서울입니다.' response_metadata={'token_u
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Aug-04
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;Aug-04
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;'Aug-04'
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;'Aug-04'
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;입력 변수가 1개인 함수의 경우&lt;/p&gt;
 
@@ -914,13 +908,11 @@ content='대한민국의 수도는 서울입니다.' response_metadata={'token_u
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;5
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;5
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;5
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;입력 변수가 여러 개인 경우, 인수를 딕셔너리 하나로 받아서 원 함수를 호출하는 형태의 wrapping 함수를 재정의하여 활용해야 한다.&lt;/p&gt;
 
@@ -936,13 +928,11 @@ content='대한민국의 수도는 서울입니다.' response_metadata={'token_u
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;potato-pizza
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;potato-pizza
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;'potato-pizza'
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;'potato-pizza'
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;굳이 함수를 재정의하지 않고 unpacking 연산자와 lambda를 활용하여 간단하게 작성할 수 있다.&lt;/p&gt;
 
@@ -953,9 +943,8 @@ content='대한민국의 수도는 서울입니다.' response_metadata={'token_u
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;'potato-pizza'
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;'potato-pizza'
 &lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;아래와 같이 활용할 수 있다.&lt;/p&gt;
 
@@ -970,9 +959,8 @@ content='대한민국의 수도는 서울입니다.' response_metadata={'token_u
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;IPython.core.display.Markdown object&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;</content><summary type="html"></summary></entry><entry><title type="html">프롬프트 엔지니어링 기법 정리</title><link href="/prompt-engineering/" rel="alternate" type="text/html" title="프롬프트 엔지니어링 기법 정리" /><published>2024-06-26T22:43:00+09:00</published><updated>2024-06-26T22:43:00+09:00</updated><id>/prompt-engineering</id><content type="html" xml:base="/prompt-engineering/">&lt;h1 id=&quot;prompt-engineering&quot;&gt;Prompt Engineering&lt;/h1&gt;
+&lt;pre&gt;&lt;code class=&quot;language-output&quot;&gt;&amp;lt;IPython.core.display.Markdown object&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;</content><summary type="html"></summary></entry><entry><title type="html">프롬프트 엔지니어링 기법 정리</title><link href="/prompt-engineering/" rel="alternate" type="text/html" title="프롬프트 엔지니어링 기법 정리" /><published>2024-06-26T22:43:00+09:00</published><updated>2024-06-26T22:43:00+09:00</updated><id>/prompt-engineering</id><content type="html" xml:base="/prompt-engineering/">&lt;h1 id=&quot;prompt-engineering&quot;&gt;Prompt Engineering&lt;/h1&gt;
 
 &lt;p&gt;DAIR.AI에서 제공하는 &lt;a href=&quot;https://www.promptingguide.ai/&quot;&gt;Prompt Engineering Guide&lt;/a&gt; 공식 문서를 보면서 공부하였다.&lt;/p&gt;
 
